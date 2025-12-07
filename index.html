@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DXN Business Opportunity | Join Our Team</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(135deg, #020617, #022c22, #0f172a);
+      --accent: #22c55e;
+      --accent-soft: rgba(34, 197, 94, 0.15);
+      --accent-strong: #16a34a;
+      --text-main: #f9fafb;
+      --text-muted: #9ca3af;
+      --card-bg: rgba(15, 23, 42, 0.8);
+      --border-soft: rgba(148, 163, 184, 0.35);
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.75);
+      --radius-xl: 24px;
+      --transition-fast: 0.2s ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background-image: var(--bg-gradient);
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px 48px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1120px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #bbf7d0, #16a34a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 20px;
+      color: #022c22;
+      box-shadow: 0 14px 40px rgba(34, 197, 94, 0.35);
+    }
+
+    .brand-text-main {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-text-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .header-cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      padding: 6px 14px;
+      font-size: 12px;
+      color: var(--accent);
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(14px);
+    }
+
+    .btn-outline {
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      padding: 8px 18px;
+      font-size: 13px;
+      color: var(--accent);
+      background: transparent;
+      cursor: pointer;
+      transition: background var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .btn-outline:hover {
+      background: var(--accent-soft);
+      transform: translateY(-1px);
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      gap: 28px;
+    }
+
+    @media (max-width: 880px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.16), transparent 60%),
+                  var(--card-bg);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-soft);
+      padding: 24px 22px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid var(--accent-soft);
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .hero-badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);
+    }
+
+    h1 {
+      font-size: clamp(28px, 4vw, 38px);
+      line-height: 1.08;
+      margin-bottom: 10px;
+      letter-spacing: -0.03em;
+    }
+
+    h1 span.highlight {
+      color: #bbf7d0;
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 480px;
+      margin-bottom: 20px;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .point {
+      padding: 10px 12px;
+      border-radius: 16px;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      background: radial-gradient(circle at top left,
+                   rgba(31, 41, 55, 0.9),
+                   rgba(15, 23, 42, 0.96));
+      font-size: 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .point-icon {
+      margin-top: 2px;
+      font-size: 14px;
+    }
+
+    .hero-footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 4px;
+    }
+
+    .hero-main-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .btn-primary {
+      border-radius: 999px;
+      border: none;
+      padding: 10px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      background: radial-gradient(circle at top left, #4ade80, #16a34a);
+      color: #022c22;
+      cursor: pointer;
+      box-shadow: 0 14px 40px rgba(34, 197, 94, 0.45);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+        filter var(--transition-fast);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 20px 60px rgba(34, 197, 94, 0.65);
+      filter: brightness(1.05);
+    }
+
+    .mini-note {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .mini-note strong {
+      color: #e5e7eb;
+    }
+
+    .video-card {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-soft);
+      padding: 18px 18px 20px;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .video-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .video-label span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      font-size: 10px;
+      color: var(--accent);
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 */
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(75, 85, 99, 0.9);
+      background: #020617;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .motivation {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .motivation strong {
+      color: #e5e7eb;
+    }
+
+    .motivation ul {
+      margin-top: 10px;
+      padding-left: 18px;
+      display: grid;
+      gap: 4px;
+    }
+
+    .motivation li::marker {
+      color: var(--accent-strong);
+    }
+
+    /* FORM SECTION */
+    .form-card {
+      margin-top: 8px;
+      background: radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.12), transparent 65%),
+                  var(--card-bg);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-soft);
+      padding: 22px 20px 24px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .form-headline {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .form-subtitle {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 14px 16px;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 13px;
+    }
+
+    .field-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .field-label span {
+      font-size: 12px;
+    }
+
+    .required {
+      font-size: 11px;
+      color: var(--accent);
+    }
+
+    input,
+    select,
+    textarea {
+      border-radius: 12px;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--text-main);
+      padding: 9px 11px;
+      font-size: 13px;
+      outline: none;
+      transition: border var(--transition-fast), box-shadow var(--transition-fast),
+        background var(--transition-fast), transform var(--transition-fast);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #4b5563;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--accent-strong);
+      box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.55);
+      transform: translateY(-1px);
+      background: rgba(15, 23, 42, 0.98);
+    }
+
+    textarea {
+      min-height: 74px;
+      resize: vertical;
+    }
+
+    input[type="file"] {
+      padding: 6px 11px;
+      font-size: 12px;
+    }
+
+    .form-footer {
+      grid-column: 1 / -1;
+      margin-top: 4px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .legal-note {
+      font-size: 11px;
+      color: var(--text-muted);
+      max-width: 460px;
+      line-height: 1.45;
+    }
+
+    .status-message {
+      grid-column: 1 / -1;
+      font-size: 12px;
+      margin-top: 4px;
+      padding: 8px 11px;
+      border-radius: 12px;
+      display: none;
+    }
+
+    .status-success {
+      background: rgba(22, 163, 74, 0.12);
+      color: #bbf7d0;
+      border: 1px solid rgba(22, 163, 74, 0.75);
+    }
+
+    .status-error {
+      background: rgba(185, 28, 28, 0.12);
+      color: #fecaca;
+      border: 1px solid rgba(239, 68, 68, 0.85);
+    }
+
+    footer {
+      margin-top: 10px;
+      font-size: 11px;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px dashed rgba(34, 197, 94, 0.6);
+    }
+
+    footer a:hover {
+      border-bottom-style: solid;
+    }
+
+    /* smooth scroll for "Join Now" button */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <div class="brand-logo">DX</div>
+        <div>
+          <div class="brand-text-main">DXN Opportunity</div>
+          <div class="brand-text-sub">Wellness · Freedom · Passive Income</div>
+        </div>
+      </div>
+      <div class="header-cta">
+        <div class="pill">🚀 Bangladesh & Global Team Expansion</div>
+        <button class="btn-outline" type="button" onclick="document.getElementById('join-form-card').scrollIntoView({behavior:'smooth'})">
+          Join our success team →
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- LEFT: HERO / TEXT -->
+      <section class="hero-card">
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          DXN Business · Real Products · Real People
+        </div>
+        <h1>
+          Create your <span class="highlight">lifetime passive income</span><br />
+          with DXN — starting today.
+        </h1>
+        <p class="hero-subtitle">
+          Build a simple, duplicatable business system with health products people
+          already love — and a global marketing plan that can pay you month after month.
+        </p>
+
+        <div class="hero-points">
+          <div class="point">
+            <span class="point-icon">💎</span>
+            <div>
+              <strong>Proven marketing plan</strong><br />
+              DXN’s plan rewards you for helping people, not gambling with money.
+            </div>
+          </div>
+          <div class="point">
+            <span class="point-icon">🌱</span>
+            <div>
+              <strong>Powerful wellness products</strong><br />
+              Ganoderma, spirulina, coffee & more — real value, real repeat orders.
+            </div>
+          </div>
+          <div class="point">
+            <span class="point-icon">🤝</span>
+            <div>
+              <strong>Step-by-step mentoring</strong><br />
+              Our team guides you: presentations, scripts, mindset & duplication system.
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-footer">
+          <div class="hero-main-cta">
+            <button class="btn-primary" type="button" onclick="document.getElementById('join-form-card').scrollIntoView({behavior:'smooth'})">
+              Yes, I want to join DXN →
+            </button>
+            <div class="mini-note">
+              <strong>No joining pressure.</strong> We work with serious people who
+              want long-term freedom.
+            </div>
+          </div>
+          <div class="mini-note">
+            Already watched the video? <strong>Fill the form below</strong> and we’ll contact you personally.
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT: VIDEO + MOTIVATION TEXT -->
+      <section class="video-card">
+        <div class="video-label">
+          <span>▶</span> Watch this first: DXN Business Overview
+        </div>
+        <div class="video-wrapper">
+          <!-- Replace VIDEO_ID with your YouTube video ID -->
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID"
+            title="DXN Business Opportunity"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="motivation">
+          <strong>Why DXN & Why Now?</strong>
+          <ul>
+            <li>People are more health-conscious than ever — wellness is exploding worldwide.</li>
+            <li>DXN already operates in many countries, so your network can grow globally.</li>
+            <li>You can start part-time beside your study, job or existing business.</li>
+            <li>Use our presentations, scripts and online tools — you don’t need to “be an expert”.</li>
+          </ul>
+          <br />
+          If you’re coachable, hungry to grow, and ready to help others, our team will
+          support you to build a strong DXN organization step by step.
+        </div>
+      </section>
+    </main>
+
+    <!-- FORM SECTION -->
+    <section class="form-card" id="join-form-card">
+      <h2 class="form-headline">Join Our DXN Success Team</h2>
+      <p class="form-subtitle">
+        Fill in your details exactly as in your official documents. We’ll help you
+        open or verify your DXN ID and guide you with the next steps.
+      </p>
+
+      <form id="joinForm">
+        <div class="field-group">
+          <div class="field-label">
+            <span>Full Name on your NID Card</span>
+            <span class="required">Required</span>
+          </div>
+          <input
+            type="text"
+            name="full_name"
+            placeholder="Enter your full legal name"
+            required
+          />
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">
+            <span>Date of Birth</span>
+            <span class="required">Required</span>
+          </div>
+          <input type="date" name="dob" required />
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">
+            <span>Mobile Number</span>
+            <span class="required">Required</span>
+          </div>
+          <input
+            type="tel"
+            name="mobile"
+            placeholder="+8801XXXXXXXXX"
+            required
+          />
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">
+            <span>Full Address</span>
+            <span class="required">Required</span>
+          </div>
+          <textarea
+            name="address"
+            placeholder="House, Road, Area, Thana, District"
+            required
+          ></textarea>
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">
+            <span>Post Code</span>
+            <span class="required">Required</span>
+          </div>
+          <input
+            type="text"
+            name="postcode"
+            placeholder="e.g. 1207"
+            required
+          />
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">
+            <span>Division</span>
+            <span class="required">Required</span>
+          </div>
+          <select name="division" required>
+            <option value="">Select your division</option>
+            <option value="Dhaka">Dhaka</option>
+            <option value="Chattogram">Chattogram</option>
+            <option value="Rajshahi">Rajshahi</option>
+            <option value="Khulna">Khulna</option>
+            <option value="Barishal">Barishal</option>
+            <option value="Sylhet">Sylhet</option>
+            <option value="Rangpur">Rangpur</option>
+            <option value="Mymensingh">Mymensingh</option>
+            <option value="Other">Other / International</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">
+            <span>NID or Passport Number</span>
+            <span class="required">Required</span>
+          </div>
+          <input
+            type="text"
+            name="nid_passport"
+            placeholder="Enter your NID or Passport number"
+            required
+          />
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">
+            <span>Upload your picture</span>
+            <span class="required">Required</span>
+          </div>
+          <input type="file" name="photo" accept="image/*" required />
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">
+            <span>Why do you want to build DXN business?</span>
+            <span style="font-size: 11px; color: var(--text-muted);">Optional</span>
+          </div>
+          <textarea
+            name="reason"
+            placeholder="Share your goal: financial freedom, health, time freedom, etc."
+          ></textarea>
+        </div>
+
+        <div class="form-footer">
+          <button class="btn-primary" type="submit">
+            Submit &amp; Connect with Mentor
+          </button>
+          <div class="legal-note">
+            By submitting this form, you agree that we can contact you regarding DXN
+            business information. Please do <strong>not</strong> share this page
+            publicly if you are not allowed to collect personal data in your country.
+          </div>
+        </div>
+
+        <div id="statusSuccess" class="status-message status-success">
+          ✅ Thank you! Your information was submitted successfully. We will contact you soon, inshaAllah.
+        </div>
+        <div id="statusError" class="status-message status-error">
+          ⚠️ Sorry, something went wrong while sending your form. Please check your internet and try again, or contact us directly on WhatsApp.
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> DXN Opportunity Team. All rights reserved.</span>
+      <span>Made with focus on integrity, health &amp; freedom.</span>
+    </footer>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const joinForm = document.getElementById("joinForm");
+    const statusSuccess = document.getElementById("statusSuccess");
+    const statusError = document.getElementById("statusError");
+
+    // TODO: Replace with your real endpoint (Google Apps Script / backend API)
+    const FORM_ENDPOINT = "https://your-secure-endpoint.example.com/submit";
+
+    joinForm.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      statusSuccess.style.display = "none";
+      statusError.style.display = "none";
+
+      // Basic client-side check for mobile & NID/Passport
+      const mobile = joinForm.mobile.value.trim();
+      const nid = joinForm.nid_passport.value.trim();
+      if (mobile.length < 10 || nid.length < 5) {
+        statusError.textContent =
+          "⚠️ Please check your Mobile Number and NID/Passport Number again.";
+        statusError.style.display = "block";
+        return;
+      }
+
+      const formData = new FormData(joinForm);
+
+      try {
+        // NOTE:
+        // 1. On GitHub Pages you cannot run backend code directly.
+        // 2. You must create a secure endpoint that accepts this FormData
+        //    and then writes it into your Excel / Google Sheet.
+        //
+        // Example options:
+        // - Google Sheets + Apps Script Web App (as API)
+        // - A small Node / PHP / Python API on your server
+        // - Third-party services that send form data to Excel/Sheets
+        //
+        // After you create your endpoint, replace FORM_ENDPOINT above.
+
+        const response = await fetch(FORM_ENDPOINT, {
+          method: "POST",
+          body: formData,
+        });
+
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+
+        statusSuccess.style.display = "block";
+        joinForm.reset();
+      } catch (error) {
+        console.error("Form submission error:", error);
+        statusError.style.display = "block";
+      }
+    });
+  </script>
+</body>
+</html>
