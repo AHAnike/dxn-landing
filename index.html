@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
   <meta charset="UTF-8" />
-  <title>DXN Business Opportunity | Join Our Team</title>
+  <title>DXN বিজনেস সুযোগ | আমাদের টিমে জয়েন করুন</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
@@ -12,19 +12,19 @@
       --accent-strong: #16a34a;
       --text-main: #f9fafb;
       --text-muted: #9ca3af;
-      --card-bg: rgba(15, 23, 42, 0.8);
+      --card-bg: rgba(15, 23, 42, 0.9);
       --border-soft: rgba(148, 163, 184, 0.35);
       --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.75);
       --radius-xl: 24px;
-      --transition-fast: 0.2s ease-out;
+      --transition-fast: 0.22s ease-out;
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Segoe UI", sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
     }
 
     body {
@@ -33,7 +33,7 @@
       color: var(--text-main);
       display: flex;
       justify-content: center;
-      padding: 32px 16px 48px;
+      padding: 18px 10px 80px;
     }
 
     .page {
@@ -41,21 +41,33 @@
       max-width: 1120px;
       display: flex;
       flex-direction: column;
-      gap: 32px;
+      gap: 24px;
     }
 
     header {
       display: flex;
       flex-wrap: wrap;
-      gap: 24px;
+      gap: 14px;
       align-items: center;
       justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      padding: 10px 14px;
+      margin: -10px -4px 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(15, 23, 42, 0.94),
+        rgba(15, 23, 42, 0.6),
+        transparent
+      );
+      backdrop-filter: blur(18px);
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
     }
 
     .brand-logo {
@@ -73,37 +85,40 @@
     }
 
     .brand-text-main {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 700;
       letter-spacing: 0.04em;
     }
 
     .brand-text-sub {
-      font-size: 12px;
+      font-size: 11px;
       color: var(--text-muted);
     }
 
-    .header-cta {
+    .header-right {
       display: flex;
-      gap: 12px;
       flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-end;
     }
 
     .pill {
       border-radius: 999px;
       border: 1px solid var(--border-soft);
-      padding: 6px 14px;
-      font-size: 12px;
+      padding: 5px 12px;
+      font-size: 11px;
       color: var(--accent);
-      background: rgba(15, 23, 42, 0.7);
+      background: rgba(15, 23, 42, 0.77);
       backdrop-filter: blur(14px);
+      white-space: nowrap;
     }
 
     .btn-outline {
       border-radius: 999px;
       border: 1px solid var(--accent);
-      padding: 8px 18px;
-      font-size: 13px;
+      padding: 7px 14px;
+      font-size: 12px;
       color: var(--accent);
       background: transparent;
       cursor: pointer;
@@ -118,21 +133,38 @@
     main {
       display: grid;
       grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-      gap: 28px;
+      gap: 22px;
     }
 
     @media (max-width: 880px) {
       main {
         grid-template-columns: minmax(0, 1fr);
       }
+      header {
+        padding-inline: 8px;
+      }
     }
 
+    @media (max-width: 640px) {
+      body {
+        padding-inline: 8px;
+        padding-bottom: 90px;
+      }
+      .page {
+        gap: 20px;
+      }
+      main {
+        gap: 16px;
+      }
+    }
+
+    /* HERO */
     .hero-card {
       background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.16), transparent 60%),
                   var(--card-bg);
       border-radius: var(--radius-xl);
       border: 1px solid var(--border-soft);
-      padding: 24px 22px;
+      padding: 22px 18px;
       box-shadow: var(--shadow-soft);
       position: relative;
       overflow: hidden;
@@ -148,7 +180,7 @@
       background: rgba(15, 23, 42, 0.85);
       border: 1px solid var(--accent-soft);
       color: var(--accent);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .hero-badge-dot {
@@ -160,9 +192,9 @@
     }
 
     h1 {
-      font-size: clamp(28px, 4vw, 38px);
-      line-height: 1.08;
-      margin-bottom: 10px;
+      font-size: clamp(26px, 4vw, 36px);
+      line-height: 1.15;
+      margin-bottom: 8px;
       letter-spacing: -0.03em;
     }
 
@@ -171,21 +203,21 @@
     }
 
     .hero-subtitle {
-      font-size: 14px;
+      font-size: 13px;
       color: var(--text-muted);
       max-width: 480px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .hero-points {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-      gap: 14px;
-      margin-bottom: 20px;
+      gap: 10px;
+      margin-bottom: 18px;
     }
 
     .point {
-      padding: 10px 12px;
+      padding: 9px 10px;
       border-radius: 16px;
       border: 1px solid rgba(55, 65, 81, 0.9);
       background: radial-gradient(circle at top left,
@@ -205,7 +237,7 @@
     .hero-footer {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 14px;
       align-items: center;
       justify-content: space-between;
       margin-top: 4px;
@@ -221,8 +253,8 @@
     .btn-primary {
       border-radius: 999px;
       border: none;
-      padding: 10px 22px;
-      font-size: 14px;
+      padding: 9px 20px;
+      font-size: 13px;
       font-weight: 600;
       background: radial-gradient(circle at top left, #4ade80, #16a34a);
       color: #022c22;
@@ -230,6 +262,7 @@
       box-shadow: 0 14px 40px rgba(34, 197, 94, 0.45);
       transition: transform var(--transition-fast), box-shadow var(--transition-fast),
         filter var(--transition-fast);
+      white-space: nowrap;
     }
 
     .btn-primary:hover {
@@ -247,19 +280,20 @@
       color: #e5e7eb;
     }
 
+    /* VIDEO CARD */
     .video-card {
       background: rgba(15, 23, 42, 0.9);
       border-radius: var(--radius-xl);
       border: 1px solid var(--border-soft);
-      padding: 18px 18px 20px;
+      padding: 16px 14px 18px;
       box-shadow: var(--shadow-soft);
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
     }
 
     .video-label {
-      font-size: 12px;
+      font-size: 11px;
       color: var(--text-muted);
       display: flex;
       align-items: center;
@@ -281,7 +315,7 @@
     .video-wrapper {
       position: relative;
       width: 100%;
-      padding-top: 56.25%; /* 16:9 */
+      padding-top: 56.25%;
       border-radius: 18px;
       overflow: hidden;
       border: 1px solid rgba(75, 85, 99, 0.9);
@@ -297,7 +331,7 @@
     }
 
     .motivation {
-      font-size: 13px;
+      font-size: 12px;
       color: var(--text-muted);
       line-height: 1.5;
     }
@@ -307,24 +341,149 @@
     }
 
     .motivation ul {
-      margin-top: 10px;
+      margin-top: 8px;
       padding-left: 18px;
       display: grid;
-      gap: 4px;
+      gap: 3px;
     }
 
     .motivation li::marker {
       color: var(--accent-strong);
     }
 
-    /* FORM SECTION */
+    /* SECTION */
+    .section {
+      margin-top: 8px;
+      background: var(--card-bg);
+      border-radius: var(--radius-xl);
+      padding: 18px 16px 20px;
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .section-header {
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .section-subtitle {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .vision-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    .vision-item {
+      padding: 10px 12px;
+      border-radius: 16px;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      background: rgba(15, 23, 42, 0.98);
+      line-height: 1.5;
+      font-size: 12px;
+    }
+
+    .vision-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 13px;
+    }
+
+    .scroll-row {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .scroll-row::-webkit-scrollbar {
+      height: 6px;
+    }
+    .scroll-row::-webkit-scrollbar-thumb {
+      background: rgba(51, 65, 85, 0.9);
+      border-radius: 999px;
+    }
+
+    .testimonial-card {
+      min-width: 230px;
+      max-width: 260px;
+      background: rgba(15, 23, 42, 0.98);
+      border-radius: 18px;
+      padding: 12px 12px 14px;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      scroll-snap-align: start;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .testimonial-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .avatar {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #38bdf8, #1d4ed8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .product-card {
+      min-width: 210px;
+      max-width: 230px;
+      background: rgba(15, 23, 42, 0.98);
+      border-radius: 18px;
+      padding: 12px;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      scroll-snap-align: start;
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .product-tag {
+      font-size: 11px;
+      color: var(--accent);
+    }
+
+    .product-title {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .product-note {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* FORM */
     .form-card {
       margin-top: 8px;
       background: radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.12), transparent 65%),
                   var(--card-bg);
       border-radius: var(--radius-xl);
       border: 1px solid var(--border-soft);
-      padding: 22px 20px 24px;
+      padding: 18px 16px 20px;
       box-shadow: var(--shadow-soft);
     }
 
@@ -336,19 +495,19 @@
     .form-subtitle {
       font-size: 12px;
       color: var(--text-muted);
-      margin-bottom: 18px;
+      margin-bottom: 14px;
     }
 
     form {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 14px 16px;
+      gap: 12px 14px;
     }
 
     .field-group {
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 5px;
       font-size: 13px;
     }
 
@@ -375,7 +534,7 @@
       border: 1px solid rgba(55, 65, 81, 0.9);
       background: rgba(15, 23, 42, 0.95);
       color: var(--text-main);
-      padding: 9px 11px;
+      padding: 9px 10px;
       font-size: 13px;
       outline: none;
       transition: border var(--transition-fast), box-shadow var(--transition-fast),
@@ -402,8 +561,9 @@
     }
 
     input[type="file"] {
-      padding: 6px 11px;
+      padding: 6px 10px;
       font-size: 12px;
+      background: rgba(15, 23, 42, 0.98);
     }
 
     .form-footer {
@@ -445,13 +605,14 @@
     }
 
     footer {
-      margin-top: 10px;
+      margin-top: 16px;
       font-size: 11px;
       color: var(--text-muted);
       display: flex;
       justify-content: space-between;
       gap: 10px;
       flex-wrap: wrap;
+      padding-inline: 2px;
     }
 
     footer a {
@@ -464,149 +625,325 @@
       border-bottom-style: solid;
     }
 
-    /* smooth scroll for "Join Now" button */
+    /* WHATSAPP FLOAT BUTTON */
+    .wa-float {
+      position: fixed;
+      right: 16px;
+      bottom: 18px;
+      z-index: 40;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #4ade80, #16a34a);
+      color: #022c22;
+      font-size: 13px;
+      text-decoration: none;
+      box-shadow: 0 16px 35px rgba(22, 163, 74, 0.6);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+        filter var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .wa-float-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      border: 2px solid rgba(6, 95, 70, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+    }
+
+    .wa-float:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 20px 55px rgba(22, 163, 74, 0.8);
+      filter: brightness(1.06);
+    }
+
+    @media (max-width: 480px) {
+      .wa-float {
+        right: 12px;
+        left: 12px;
+        justify-content: center;
+      }
+    }
+
+    /* ANIMATION BASIC */
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+    }
+    .in-view {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
     html {
       scroll-behavior: smooth;
     }
   </style>
 </head>
 <body>
+  <!-- WhatsApp Floating Button -->
+  <a
+  class="wa-float"
+  href="https://wa.me/8801567884423?text=Assalamu%20Alaikum%2C%20ami%20DXN%20business%20niye%20details%20jante%20chai."
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <div class="wa-float-icon">💬</div>
+  <span>DXN জয়েন করতে WhatsApp করুন</span>
+</a>
+
   <div class="page">
     <header>
       <div class="brand">
-        <div class="brand-logo">DX</div>
+        <div class="brand-logo">DXN</div>
         <div>
-          <div class="brand-text-main">DXN Opportunity</div>
-          <div class="brand-text-sub">Wellness · Freedom · Passive Income</div>
+          <div class="brand-text-main">DXN বিজনেস সুযোগ</div>
+          <div class="brand-text-sub">স্বাস্থ্য · স্বাধীনতা · প্যাসিভ ইনকাম</div>
         </div>
       </div>
-      <div class="header-cta">
-        <div class="pill">🚀 Bangladesh & Global Team Expansion</div>
-        <button class="btn-outline" type="button" onclick="document.getElementById('join-form-card').scrollIntoView({behavior:'smooth'})">
-          Join our success team →
+      <div class="header-right">
+        <div class="pill">🚀 বাংলাদেশ ও গ্লোবাল টিম গ্রোথ</div>
+        <button class="btn-outline" type="button"
+          onclick="document.getElementById('join-form-card').scrollIntoView({behavior:'smooth'})">
+          আমাদের CA টিমে জয়েন করুন →
         </button>
       </div>
     </header>
 
     <main>
-      <!-- LEFT: HERO / TEXT -->
-      <section class="hero-card">
+      <!-- HERO -->
+      <section class="hero-card" data-animate>
         <div class="hero-badge">
           <div class="hero-badge-dot"></div>
-          DXN Business · Real Products · Real People
+          DXN বিজনেস · রিয়েল প্রোডাক্ট · রিয়েল ইনকাম
         </div>
         <h1>
-          Create your <span class="highlight">lifetime passive income</span><br />
-          with DXN — starting today.
+          <span class="highlight">DXN এর মাধ্যমে আজীবন প্যাসিভ ইনকাম</span><br />
+          তৈরি করুন — শুরু হোক আজই।
         </h1>
         <p class="hero-subtitle">
-          Build a simple, duplicatable business system with health products people
-          already love — and a global marketing plan that can pay you month after month.
+          সহজ ও ডুপ্লিকেট করা যায় এমন একটি সিস্টেম, যেখানে মানুষ পছন্দ করে এমন
+          হেলথ প্রোডাক্ট আর শক্তিশালী গ্লোবাল মার্কেটিং প্ল্যান — যা আপনাকে
+          মাসের পর মাস ইনকাম দিতে পারে।
         </p>
 
         <div class="hero-points">
           <div class="point">
             <span class="point-icon">💎</span>
             <div>
-              <strong>Proven marketing plan</strong><br />
-              DXN’s plan rewards you for helping people, not gambling with money.
+              <strong>প্রুভেন মার্কেটিং প্ল্যান</strong><br />
+              DXN এর প্ল্যান আপনাকে রিওয়ার্ড দেয় মানুষের উপকার করার জন্য,
+              হাইপ বা গ্যাম্বলিং ছাড়া।
             </div>
           </div>
           <div class="point">
             <span class="point-icon">🌱</span>
             <div>
-              <strong>Powerful wellness products</strong><br />
-              Ganoderma, spirulina, coffee & more — real value, real repeat orders.
+              <strong>হেলথ ফোকাসড প্রোডাক্ট</strong><br />
+              গ্যানোডার্মা, স্পিরুলিনা, কফি সহ 400 + অসাধারণ প্রোডাক্ট — যেগুলো মানুষ
+              বারবার ব্যবহার করতে চায়।
             </div>
           </div>
           <div class="point">
             <span class="point-icon">🤝</span>
             <div>
-              <strong>Step-by-step mentoring</strong><br />
-              Our team guides you: presentations, scripts, mindset & duplication system.
+              <strong>স্টেপ-বাই-স্টেপ গাইডলাইন</strong><br />
+              আমাদের টিম আপনাকে প্রেজেন্টেশন, স্ক্রিপ্ট, মাইন্ডসেট ও ডুপ্লিকেশন
+              সিস্টেম সহ লাইফ টাইম গাইড করবে যতদিন না আপনি সফল হন । 
             </div>
           </div>
         </div>
 
         <div class="hero-footer">
           <div class="hero-main-cta">
-            <button class="btn-primary" type="button" onclick="document.getElementById('join-form-card').scrollIntoView({behavior:'smooth'})">
-              Yes, I want to join DXN →
+            <button class="btn-primary" type="button"
+              onclick="document.getElementById('join-form-card').scrollIntoView({behavior:'smooth'})">
+              হ্যাঁ, আমি DXN এ জয়েন করতে চাই →
             </button>
             <div class="mini-note">
-              <strong>No joining pressure.</strong> We work with serious people who
-              want long-term freedom.
+              <strong>কোনো জোর করে জয়েন করানো না।</strong> আমরা কাজ করি তাদের সাথে
+              যারা সত্যিকারের ফিউচার বানাতে চায়।
             </div>
           </div>
           <div class="mini-note">
-            Already watched the video? <strong>Fill the form below</strong> and we’ll contact you personally.
+            ভিডিও দেখে থাকলে, নিচের ফর্মটি পূরণ করুন — আমরা ব্যক্তিগতভাবে যোগাযোগ করব।
           </div>
         </div>
       </section>
 
-      <!-- RIGHT: VIDEO + MOTIVATION TEXT -->
-      <section class="video-card">
+      <!-- VIDEO + MOTIVATION (FACEBOOK VIDEO) -->
+      <section class="video-card" data-animate>
         <div class="video-label">
-          <span>▶</span> Watch this first: DXN Business Overview
+          <span>▶</span>
+          প্রথমে দেখুন: DXN বিজনেস ওভারভিউ (Facebook Video)
         </div>
         <div class="video-wrapper">
-          <!-- Replace VIDEO_ID with your YouTube video ID -->
+          <!-- এখানে Facebook থেকে কপি করা iframe-এর src বসাবেন -->
+          <!-- Facebook-এ গিয়ে ভিডিওতে তিন ডট → Embed → Code থেকে src="" কপি করুন -->
           <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID"
-            title="DXN Business Opportunity"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+            src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F426120250389793%2F&show_text=false&width=560&t=0"
+            style="border:none;overflow:hidden"
+            scrolling="no"
+            frameborder="0"
+            allowfullscreen="true"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+          </iframe>
         </div>
         <div class="motivation">
-          <strong>Why DXN & Why Now?</strong>
+          <strong>কেন DXN? কেন এখনই?</strong>
           <ul>
-            <li>People are more health-conscious than ever — wellness is exploding worldwide.</li>
-            <li>DXN already operates in many countries, so your network can grow globally.</li>
-            <li>You can start part-time beside your study, job or existing business.</li>
-            <li>Use our presentations, scripts and online tools — you don’t need to “be an expert”.</li>
+            <li>মানুষ আগের থেকে অনেক বেশি হেলথ কনশাস — ওয়েলনেস ইন্ডাস্ট্রি দ্রুত বাড়ছে।</li>
+            <li>DXN ইতিমধ্যে 200+ দেশে আছে, তাই আপনার নেটওয়ার্ক গ্লোবালি গ্রো করতে পারে।</li>
+            <li>পড়াশোনা, চাকরি বা অন্য ব্যবসার পাশাপাশি পার্ট-টাইম হিসেবে শুরু করা যায়।</li>
+            <li>প্রি-রেডি প্রেজেন্টেশন, স্ক্রিপ্ট ও অনলাইন টুল দিয়ে সহজে কাজ করতে পারবেন।</li>
           </ul>
-          <br />
-          If you’re coachable, hungry to grow, and ready to help others, our team will
-          support you to build a strong DXN organization step by step.
         </div>
       </section>
     </main>
 
+    <!-- TEAM VISION / WHY JOIN -->
+    <section class="section" data-animate>
+      <div class="section-header">
+        <h2 class="section-title">আমাদের টিমের ভিশন ও কালচার</h2>
+        <p class="section-subtitle">
+          আমরা এমন একটি DXN টিম তৈরি করছি যেখানে থাকবে ইমানদারী, শিক্ষা ও সহজ ডুপ্লিকেশন সিস্টেম।
+        </p>
+      </div>
+      <div class="vision-grid">
+        <div class="vision-item">
+          <strong>এডুকেশন বেইজড বিজনেস</strong>
+          ধাপে ধাপে হেলথ, প্রোডাক্ট নলেজ ও বিজনেস স্কিল শেখাই — যাতে আপনি নিজে
+          বুঝে ও বুঝিয়ে কাজ করতে পারেন।
+        </div>
+        <div class="vision-item">
+          <strong>হাইপ নয়, সৎ কাজ</strong>
+          “এক রাতে ধনী” টাইপ হাইপ নয় — আমরা শেখাই কনসিস্টেন্ট কাজ, লং টার্ম
+          রিলেশনশিপ আর স্টেবল ইনকাম।
+        </div>
+        <div class="vision-item">
+          <strong>কেন আমাদের টিমে?</strong>
+          এখানে পাবেন প্রি-রেডি টুল, মেন্টরিং, সিস্টেম ও এমন কমিউনিটি যারা আপনাকে
+          সামনে এগিয়ে যেতে হেল্প করবে।
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section" data-animate>
+      <div class="section-header">
+        <h2 class="section-title">আমাদের DXN পার্টনারদের কিছু কথা</h2>
+        <p class="section-subtitle">
+          রিয়েল মানুষ, রিয়েল জার্নি — পরের স্টোরি হতে পারেন আপনিই।
+        </p>
+      </div>
+      <div class="scroll-row">
+        <article class="testimonial-card">
+          <p>
+            “আমি পড়াশোনার পাশাপাশি পার্ট-টাইম DXN শুরু করি। সিস্টেম ফলো করেই
+            কয়েক মাসে ছোট কিন্তু স্টেবল মাসিক ইনকাম তৈরি হয়েছে।”
+          </p>
+          <div class="testimonial-meta">
+            <div class="avatar">S</div>
+            <div>স্টুডেন্ট · ঢাকা</div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <p>
+            “DXN এর প্রোডাক্ট আমাদের পরিবারের হেলথে হেল্প করেছে, আর বিজনেস
+            ধীরে ধীরে ঋণ কমাতে সাহায্য করেছে। টিমের সাপোর্ট অসাধারণ।”
+          </p>
+          <div class="testimonial-meta">
+            <div class="avatar">F</div>
+            <div>গৃহিণী · চট্টগ্রাম</div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <p>
+            “জবহোল্ডার হিসেবে সেকেন্ড ইনকাম চাচ্ছিলাম। DXN আমাকে এমন সিস্টেম
+            দিয়েছে যেখানে জব ছাড়াই অ্যাসেট তৈরি করতে পারছি।”
+          </p>
+          <div class="testimonial-meta">
+            <div class="avatar">M</div>
+            <div>জবহোল্ডার · রাজশাহী</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="section" data-animate>
+      <div class="section-header">
+        <h2 class="section-title">যে DXN প্রোডাক্ট দিয়ে টিম গড়তে পারবেন</h2>
+        <p class="section-subtitle">
+          হাই-কোয়ালিটি ওয়েলনেস প্রোডাক্ট যেগুলো মানুষ বারবার ব্যবহার করতে পছন্দ করে।
+        </p>
+      </div>
+      <div class="scroll-row">
+        <article class="product-card">
+          <div class="product-tag">গ্যানোডার্মা কফি</div>
+          <div class="product-title">DXN লিঙ্গঝি / ৩-ইন-১ কফি</div>
+          <p class="product-note">
+            এমন টেস্টি ফাংশনাল কফি যা খুব সহজে বন্ধু, পরিবার ও অফিসে শেয়ার করা যায়।
+          </p>
+        </article>
+        <article class="product-card">
+          <div class="product-tag">সাপ্লিমেন্ট</div>
+          <div class="product-title">স্পিরুলিনা, RG/GL ও আরও অনেক</div>
+          <p class="product-note">
+            প্রিমিয়াম সাপ্লিমেন্ট যা মানুষ প্রতিদিন ব্যবহার করে দীর্ঘমেয়াদী সুস্থতার জন্য।
+          </p>
+        </article>
+        <article class="product-card">
+          <div class="product-tag">পার্সোনাল কেয়ার</div>
+          <div class="product-title">টুথপেস্ট, সাবান ও স্কিন কেয়ার</div>
+          <p class="product-note">
+            দৈনন্দিন ব্যবহার্য প্রোডাক্ট যা আপনার খরচকে বিজনেস ভলিউমে পরিণত করে।
+          </p>
+        </article>
+      </div>
+    </section>
+
     <!-- FORM SECTION -->
-    <section class="form-card" id="join-form-card">
-      <h2 class="form-headline">Join Our DXN Success Team</h2>
+    <section class="form-card" id="join-form-card" data-animate>
+      <h2 class="form-headline">আমাদের DXN সাকসেস টিমে জয়েন করুন</h2>
       <p class="form-subtitle">
-        Fill in your details exactly as in your official documents. We’ll help you
-        open or verify your DXN ID and guide you with the next steps.
+        আপনার অফিসিয়াল ডকুমেন্ট অনুযায়ী সঠিক তথ্য দিন। আমরা আপনাকে DXN আইডি
+        ওপেন / ভেরিফাই করতে ও পরবর্তী ধাপে গাইড করব।
       </p>
 
       <form id="joinForm">
         <div class="field-group">
           <div class="field-label">
-            <span>Full Name on your NID Card</span>
-            <span class="required">Required</span>
+            <span>আপনার NID কার্ডে থাকা পূর্ণ নাম</span>
+            <span class="required">আবশ্যক</span>
           </div>
           <input
             type="text"
             name="full_name"
-            placeholder="Enter your full legal name"
+            placeholder="পূর্ণ নাম লিখুন"
             required
           />
         </div>
 
         <div class="field-group">
           <div class="field-label">
-            <span>Date of Birth</span>
-            <span class="required">Required</span>
+            <span>জন্ম তারিখ</span>
+            <span class="required">আবশ্যক</span>
           </div>
           <input type="date" name="dob" required />
         </div>
 
         <div class="field-group">
           <div class="field-label">
-            <span>Mobile Number</span>
-            <span class="required">Required</span>
+            <span>মোবাইল নম্বর</span>
+            <span class="required">আবশ্যক</span>
           </div>
           <input
             type="tel"
@@ -618,128 +955,140 @@
 
         <div class="field-group">
           <div class="field-label">
-            <span>Full Address</span>
-            <span class="required">Required</span>
+            <span>পূর্ণ ঠিকানা</span>
+            <span class="required">আবশ্যক</span>
           </div>
           <textarea
             name="address"
-            placeholder="House, Road, Area, Thana, District"
+            placeholder="বাড়ি, রোড, এলাকা, থানা, জেলা"
             required
           ></textarea>
         </div>
 
         <div class="field-group">
           <div class="field-label">
-            <span>Post Code</span>
-            <span class="required">Required</span>
+            <span>পোস্ট কোড</span>
+            <span class="required">আবশ্যক</span>
           </div>
           <input
             type="text"
             name="postcode"
-            placeholder="e.g. 1207"
+            placeholder="উদাহরণ: ১২০৭"
             required
           />
         </div>
 
         <div class="field-group">
           <div class="field-label">
-            <span>Division</span>
-            <span class="required">Required</span>
+            <span>বিভাগ</span>
+            <span class="required">আবশ্যক</span>
           </div>
           <select name="division" required>
-            <option value="">Select your division</option>
-            <option value="Dhaka">Dhaka</option>
-            <option value="Chattogram">Chattogram</option>
-            <option value="Rajshahi">Rajshahi</option>
-            <option value="Khulna">Khulna</option>
-            <option value="Barishal">Barishal</option>
-            <option value="Sylhet">Sylhet</option>
-            <option value="Rangpur">Rangpur</option>
-            <option value="Mymensingh">Mymensingh</option>
-            <option value="Other">Other / International</option>
+            <option value="">আপনার বিভাগ নির্বাচন করুন</option>
+            <option value="Dhaka">ঢাকা</option>
+            <option value="Chattogram">চট্টগ্রাম</option>
+            <option value="Rajshahi">রাজশাহী</option>
+            <option value="Khulna">খুলনা</option>
+            <option value="Barishal">বরিশাল</option>
+            <option value="Sylhet">সিলেট</option>
+            <option value="Rangpur">রংপুর</option>
+            <option value="Mymensingh">ময়মনসিংহ</option>
+            <option value="Other">অন্যান্য / বিদেশ</option>
           </select>
         </div>
 
         <div class="field-group">
           <div class="field-label">
-            <span>NID or Passport Number</span>
-            <span class="required">Required</span>
+            <span>NID / পাসপোর্ট নম্বর</span>
+            <span class="required">আবশ্যক</span>
           </div>
           <input
             type="text"
             name="nid_passport"
-            placeholder="Enter your NID or Passport number"
+            placeholder="আপনার NID বা পাসপোর্ট নম্বর"
             required
           />
         </div>
 
         <div class="field-group">
           <div class="field-label">
-            <span>Upload your picture</span>
-            <span class="required">Required</span>
+            <span>আপনার ছবি (প্রোফাইল)</span>
+            <span class="required">আবশ্যক (শুধু ফর্মের জন্য, এই সাধারণ backend এ ছবি সেভ হবে না)</span>
           </div>
           <input type="file" name="photo" accept="image/*" required />
         </div>
 
         <div class="field-group">
           <div class="field-label">
-            <span>Why do you want to build DXN business?</span>
-            <span style="font-size: 11px; color: var(--text-muted);">Optional</span>
+            <span>আপনি DXN বিজনেস করতে চান কেন?</span>
+            <span style="font-size: 11px; color: var(--text-muted);">ঐচ্ছিক</span>
           </div>
           <textarea
             name="reason"
-            placeholder="Share your goal: financial freedom, health, time freedom, etc."
+            placeholder="আপনার লক্ষ্য লিখুন: ফাইন্যান্সিয়াল ফ্রিডম, হেলথ, টাইম ফ্রিডম ইত্যাদি"
           ></textarea>
         </div>
 
         <div class="form-footer">
           <button class="btn-primary" type="submit">
-            Submit &amp; Connect with Mentor
+            সাবমিট করুন ও মেন্টরের সাথে কানেক্ট হোন
           </button>
           <div class="legal-note">
-            By submitting this form, you agree that we can contact you regarding DXN
-            business information. Please do <strong>not</strong> share this page
-            publicly if you are not allowed to collect personal data in your country.
+            এই ফর্ম সাবমিট করার মাধ্যমে আপনি সম্মতি দিচ্ছেন যে আমরা DXN বিজনেস
+            সংক্রান্ত তথ্যের জন্য আপনার সাথে  যোগাযোগ করতে পারি। 
           </div>
         </div>
 
         <div id="statusSuccess" class="status-message status-success">
-          ✅ Thank you! Your information was submitted successfully. We will contact you soon, inshaAllah.
+          ✅ ধন্যবাদ! আপনার তথ্য সফলভাবে সাবমিট হয়েছে। ইনশাআল্লাহ খুব শিগগিরই আমরা আপনার সাথে যোগাযোগ করব।
         </div>
         <div id="statusError" class="status-message status-error">
-          ⚠️ Sorry, something went wrong while sending your form. Please check your internet and try again, or contact us directly on WhatsApp.
+          ⚠️ দুঃখিত, ফর্ম পাঠাতে সমস্যা হয়েছে। আবার চেষ্টা করুন অথবা WhatsApp এ আমাদেরকে মেসেজ করুন।
         </div>
       </form>
     </section>
 
     <footer>
-      <span>© <span id="year"></span> DXN Opportunity Team. All rights reserved.</span>
-      <span>Made with focus on integrity, health &amp; freedom.</span>
+      <span>© <span id="year"></span> DXN CA টিম। সর্বস্বত্ব সংরক্ষিত।</span>
+      <span>ইমানদারী, স্বাস্থ্য ও স্বাধীনতাকে ফোকাস করে তৈরি।</span>
     </footer>
   </div>
 
   <script>
-    // Set current year in footer
+    // সাল বসানো
     document.getElementById("year").textContent = new Date().getFullYear();
 
+    // স্ক্রল অ্যানিমেশন
+    const animated = document.querySelectorAll("[data-animate]");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.18 }
+    );
+    animated.forEach((el) => observer.observe(el));
+
+    // ফর্ম সাবমিট (Google Sheet / Apps Script backend)
     const joinForm = document.getElementById("joinForm");
     const statusSuccess = document.getElementById("statusSuccess");
     const statusError = document.getElementById("statusError");
 
-    // TODO: Replace with your real endpoint (Google Apps Script / backend API)
-    const FORM_ENDPOINT = "https://your-secure-endpoint.example.com/submit";
+    // এখানে Apps Script Web App URL বসাতে হবে
+    const FORM_ENDPOINT = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
 
     joinForm.addEventListener("submit", async function (e) {
       e.preventDefault();
       statusSuccess.style.display = "none";
       statusError.style.display = "none";
 
-      // Basic client-side check for mobile & NID/Passport
       const mobile = joinForm.mobile.value.trim();
       const nid = joinForm.nid_passport.value.trim();
       if (mobile.length < 10 || nid.length < 5) {
-        statusError.textContent =
-          "⚠️ Please check your Mobile Number and NID/Passport Number again.";
         statusError.style.display = "block";
         return;
       }
@@ -747,18 +1096,6 @@
       const formData = new FormData(joinForm);
 
       try {
-        // NOTE:
-        // 1. On GitHub Pages you cannot run backend code directly.
-        // 2. You must create a secure endpoint that accepts this FormData
-        //    and then writes it into your Excel / Google Sheet.
-        //
-        // Example options:
-        // - Google Sheets + Apps Script Web App (as API)
-        // - A small Node / PHP / Python API on your server
-        // - Third-party services that send form data to Excel/Sheets
-        //
-        // After you create your endpoint, replace FORM_ENDPOINT above.
-
         const response = await fetch(FORM_ENDPOINT, {
           method: "POST",
           body: formData,
