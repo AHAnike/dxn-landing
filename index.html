@@ -953,20 +953,17 @@
           />
         </div>
         <div class="field-group">
-  <div class="field-label">
-    <span>জিমেইল এড্রেস </span>
-    <span class="required">আবশ্যক</span>
-  </div>
-  <input
-  type="email"
-  name="email"
-  placeholder="yourname@gmail.com"
-  required
-/>
-
-  />
-</div>
-
+            <div class="field-label">
+              <span>জিমেইল এড্রেস </span>
+              <span class="required">আবশ্যক</span>
+            </div>
+            <input
+              type="email"
+              name="email"
+              placeholder="growwithca@gmail.com"
+              required
+            />
+          </div>
         <div class="field-group">
           <div class="field-label">
             <span>পূর্ণ ঠিকানা</span>
@@ -1024,13 +1021,16 @@
           />
         </div>
 
-        <div class="field-group">
-          <div class="field-label">
-            <span>আপনার ছবি (প্রোফাইল)</span>
-            <span class="required">আবশ্যক (শুধু ফর্মের জন্য, এই সাধারণ backend এ ছবি সেভ হবে না)</span>
-          </div>
-          <input type="file" name="photo" accept="image/*" required />
-        </div>
+        <form id="joinForm" enctype="multipart/form-data" method="POST">
+
+            <div class="field-group">
+              <div class="field-label">
+                <span>আপনার ছবি (প্রোফাইল)</span>
+                <span class="required">আবশ্যক</span>
+              </div>
+              <input type="file" name="photo" accept="image/*" required />
+            </div>
+            
 
         <div class="field-group">
           <div class="field-label">
@@ -1093,7 +1093,7 @@
     const statusError = document.getElementById("statusError");
 
     // এখানে Apps Script Web App URL বসাতে হবে
-    const FORM_ENDPOINT = "https://script.google.com/a/macros/seu.edu.bd/s/AKfycbwvFmOk91WVjqA0JAMW1iKw-AvbZ6Uy0qz7Oa56DZ4J06L3VgOthBm9KRhPPV3L-sapAw/exec";
+    const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbzEsJsq5kfdmvpsmuCIVSSJyChUyyNyI30DC-NsLXMHItHAjFJsU-R7j2J5Q5iOvbNmBg/exec";
 
     joinForm.addEventListener("submit", async function (e) {
       e.preventDefault();
